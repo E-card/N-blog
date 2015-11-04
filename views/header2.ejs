@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Blog</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+
+<header>
+    <h1><%= title %></h1>
+</header>
+
+<nav>
+    <% if (user) { %>
+    <span><a title="活动详情" href="/">活动详情</a></span>
+    <span><a title="活动流程" href="/schedule">活动流程</a></span>
+    <span><a title="活动现场" href="/post">活动现场</a></span>
+    <span><a title="友情链接" href="/links">友情链接</a></span>
+    <span><a title="登出" href="/logout">登出</a></span>
+    <% } else { %>
+    <span><a title="登录" href="/login">login</a></span>
+    <span><a title="注册" href="/reg">register</a></span>
+    <% } %>
+
+</nav>
+
+<article>
+
+    <% if (success) { %>
+    <div><%= success %></div>
+    <% } %>
+    <% if (error) { %>
+    <div><%= error %> </div>
+<% } %>
