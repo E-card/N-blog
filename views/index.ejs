@@ -1,7 +1,8 @@
-<%- include header %>
+<%- include header3 %>
 <% posts.forEach(function (post, index) { %>
   <p><h2><a href="/u/<%= post.name %>/<%= post.time.day %>/<%= post.title %>"><%= post.title %></a></h2>
-  <a href="/u/<%= post.name %>"><img src="<%= post.head %>" class="r_head" /></a></p>
+  <a href="/u/<%= post.name %>"><img src="<%= post.head %>" class="r_head" /></a>
+<a href="/reprint/<%= post.name %>/<%= post.time.day %>/<%= post.title %>/"><img src="<%= post.head %>" class="r_head" /></a></p>
   <p class="info">
     作者：<a href="/u/<%= post.name %>"><%= post.name %></a> | 
     日期：<%= post.time.minute %> | 
@@ -17,7 +18,8 @@
   </p>
   <p><%- post.post %></p>
   <p class="info">
-    阅读：<%= post.pv %> | 
+
+    阅读：<%= post.pv %>
     评论：<%= post.comments.length %> | 
     转载：
     <% if (post.reprint_info.reprint_to) { %>
