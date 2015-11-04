@@ -1,0 +1,1 @@
+d:/mean/mongodb/3.0/bin/mongod --dbpath d:/mean/projects/N-blog/database
